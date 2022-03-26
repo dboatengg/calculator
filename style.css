@@ -45,7 +45,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: darkk) {
   :root {
     --main-background: hsl(268, 75%, 9%);
     --toggle-background: hsl(268, 71%, 12%);
@@ -105,7 +105,7 @@ body {
   font-weight: bolder;
   margin: 5px;
   font-size: 2rem;
-  box-shadow: 0px 4px 5px 1px solid var(--key-shadow-button);
+  box-shadow: 0px 2px 1px 1px var(--key-shadow-button);
   cursor: pointer;
 }
 
@@ -131,12 +131,12 @@ body {
 }
 .equal {
   background-color: var(--key-background-equal);
-  box-shadow: 0px 4px 5px 1px solid var(--key-shadow-equal);
+  box-shadow: 0px 1px 1px 1px  var(--key-shadow-equal);
   color: var(--equal)
 }
 .reset, .del {
   background-color: var(--key-background-reset);
-  box-shadow: 0px 4px 5px 1px solid var(--key-shadow-reset);
+  box-shadow: 0px 1px 1px 1px var(--key-shadow-reset);
   color: var(--reset-color)
 }
 .reset {
