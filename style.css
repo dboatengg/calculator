@@ -140,6 +140,7 @@ body {
   color: var(--reset-color)
 }
 .reset {
+  text-transform: uppercase;
   grid-area: 5/1/6/3;
 }
 .equal {
