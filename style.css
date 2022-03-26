@@ -13,46 +13,59 @@
   --key-shadow-reset: hsl(224, 28%, 35%);
   --key-shadow-equal: hsl(6, 70%, 34%);
   --key-shadow-button: hsl(28, 16%, 65%);
-
-  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  
+  /* --very-dark-grayish-blue: hsl(221, 14%, 31%); */
+  --default-text: hsl(221, 14%, 31%);
+  --reset-color: hsl(30, 25%, 89%);
+  --equal: hsl(30, 25%, 89%);
   --text: hsl(0, 0, 100%);
+  --screen-color: hsl(30, 25%, 89%);
 }
 
-@media (prefers-color-scheme: lightt) {
+@media (prefers-color-scheme: light) {
   :root {
     --main-background: hsl(0, 0%, 90%);
     --toggle-background: hsl(0, 5%, 81%);
     --screen-background: hsl(0, 0%, 93%);
 
-    --key-background: hsl(185, 42%, 37%);
-    --key-background: hsl(25, 98%, 40%);
-    --key-background: hsl(45, 7%, 89%);
+    --key-background-reset: hsl(185, 42%, 37%);
+    --key-background-equal: hsl(25, 98%, 40%);
+    --key-background-button: hsl(45, 7%, 89%);
 
-    --key-shadow1: hsl(185, 58%, 25%);
-    --key-shadow2: hsl(25, 99%, 27%);
-    --key-shadow3: hsl(35, 11%, 61%);
+    --key-shadow-reset: hsl(185, 58%, 25%);
+    --key-shadow-equal: hsl(25, 99%, 27%);
+    --key-shadow-button: hsl(35, 11%, 61%);
 
-    --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+    /* --Very-dark-grayish-yellow: hsl(60, 10%, 19%); */
+    --default-text: hsl(60, 10%, 19%);
+    --reset-colour: hsl(45, 7%, 89%);
+    --screen-color: hsl(0, 0, 100%);
+    --equal: hsl(45, 7%, 89%);
     --text: hsl(0, 0, 100%);
   }
 }
 
-@media (prefers-color-scheme: darkk) {
+@media (prefers-color-scheme: dark) {
   :root {
     --main-background: hsl(268, 75%, 9%);
     --toggle-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
 
-    --key-background: hsl(268, 47%, 21%);
-    --key-background: hsl(176, 100%, 44%);
-    --key-background: hsl(281, 89%, 26%);
+    --key-background-reset: hsl(281, 89%, 26%);
+    --key-background-equal: hsl(176, 100%, 44%);
+    --key-background-button: hsl(268, 47%, 21%);
 
-    --key-shadow1: hsl(285, 91%, 52%);
-    --key-shadow2: hsl(177, 92%, 70%);
-    --key-shadow3: hsl(290, 70%, 36%);
-
-    --Light yellow: hsl(52, 100%, 62%);
+    --key-shadow-reset: hsl(285, 91%, 52%);
+    --key-shadow-equal: hsl(177, 92%, 70%);
+    --key-shadow-button: hsl(290, 70%, 36%);
+    
+    /* --Light yellow: hsl(52, 100%, 62%); */
+    --default-text: hsl(52, 100%, 62%);
+    --equal: hsl(0, 0, 100%);
+    --reset-colour: hsl(52, 100%, 62%);
     --Very dark blue: hsl(198, 20%, 13%);
     --text: hsl(0, 0, 100%);
+    --screen-color: hsl(52, 100%, 62%);
   }
 }
 
@@ -86,18 +99,20 @@ body {
 }
 .button {
   text-align: center;
-  padding: 1rem 1.5rem;
+  padding:  1.5rem 2rem;
   background-color: var(--key-background-button);
-  color: var(--very-dark-grayish-blue);
-  font-weight: 700;
+  color: var(--default-text);
+  font-weight: bolder;
   margin: 5px;
+  font-size: 2rem;
+  box-shadow: 0px 4px 5px 1px solid var(--key-shadow-button);
+  cursor: pointer;
 }
 
 /* app */
 .app {
-  /* width: 400px; */
+  width: 400px;
   min-width: 400px;
-  /* max-width: 400px; */
 }
 .screen,
 .buttons,
@@ -109,22 +124,20 @@ body {
   height: 70px;
   text-align: right;
   background-color: var(--screen-background);
-  /* background-color: blue; */
   font-size: 2.5rem;
   font-weight: 700;
   padding: 1.6rem 2.5rem;
-  color: white;
+  color: var(--screen-color);
 }
 .equal {
   background-color: var(--key-background-equal);
   box-shadow: 0px 4px 5px 1px solid var(--key-shadow-equal);
+  color: var(--equal)
 }
 .reset, .del {
   background-color: var(--key-background-reset);
   box-shadow: 0px 4px 5px 1px solid var(--key-shadow-reset);
-}
-.equal, .reset, .del {
-  color: var(--key-background-button);
+  color: var(--reset-color)
 }
 .reset {
   grid-area: 5/1/6/3;
