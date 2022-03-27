@@ -191,6 +191,8 @@ body {
   position: absolute;
   border-radius: 50%;
   opacity: 0;
+  /* width: 0; */
+  /* height: 0; */
 }
 
 .switch-toggle input + label {
