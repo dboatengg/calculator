@@ -1,4 +1,6 @@
 let screen = document.querySelector(".screen");
+const pressSound = new Audio("/images/press.mp3");
+const delSound = new Audio("/images/delete.mp3");
 let allButtons = document.querySelectorAll(".button");
 let buttonArray = Array.from(allButtons);
 
@@ -16,9 +18,11 @@ buttonArray.map((button) => {
         }
         break;
       case "DEL":
+        delSound.play();
         if (screen.innerText) screen.innerText = screen.innerText.slice(0, -1);
         break;
       default:
+        pressSound.play();
         screen.innerText += e.target.innerText;
     }
   });
