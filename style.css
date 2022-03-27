@@ -217,6 +217,8 @@ body {
 .theme {
   font-size: 12px;
   margin-right: 20px;
+  color: var(--screen-color);
+  font-weight: 700;
 }
 
 .logo {
