@@ -22,7 +22,7 @@
   --screen-color: hsl(30, 25%, 89%);
 }
 
-.lightt {
+/* .lightt {
     --main-background: hsl(0, 0%, 90%);
     --toggle-background: hsl(0, 5%, 81%);
     --screen-background: hsl(0, 0%, 93%);
@@ -35,13 +35,12 @@
     --key-shadow-equal: hsl(25, 99%, 27%);
     --key-shadow-button: hsl(35, 11%, 61%);
 
-    /* --Very-dark-grayish-yellow: hsl(60, 10%, 19%); */
     --default-text: hsl(60, 10%, 19%);
     --reset-colour: hsl(45, 7%, 89%);
     --screen-color: hsl(0, 0, 100%);
     --equal: hsl(45, 7%, 89%);
     --text: hsl(0, 0, 100%);
-}
+} */
 
 .dark {
     --main-background: hsl(268, 75%, 9%);
@@ -59,7 +58,7 @@
     /* --Light yellow: hsl(52, 100%, 62%); */
     --default-text: hsl(52, 100%, 62%);
     --equal: hsl(0, 0, 100%);
-    --reset-colour: hsl(52, 100%, 62%);
+    --reset-colour: hsl(45, 7%, 89%);
     --Very dark blue: hsl(198, 20%, 13%);
     --text: hsl(0, 0, 100%);
     --screen-color: hsl(52, 100%, 62%);
@@ -222,6 +221,7 @@ body {
 
 .logo {
   font-size: 2.5rem;
+  opacity: 0;
 }
 
 /* media querry */
