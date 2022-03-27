@@ -186,7 +186,7 @@ body {
 .switch-toggle {
    float: left;
    /* background-color: var(--screen-color); */
-   background-color: hsl(30, 25%, 89%);
+   background-color: var(--key-shadow-button);
    border-radius: 20px;
 }
 .switch-toggle input {
