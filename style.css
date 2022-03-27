@@ -150,25 +150,26 @@ body {
   outline: 2px solid slategrey;
 }
 
-
 .equal {
   background-color: var(--key-background-equal);
   box-shadow: 0px 1px 1px 1px  var(--key-shadow-equal);
   color: var(--equal)
 }
+
 .reset, .del {
   background-color: var(--key-background-reset);
   box-shadow: 0px 1px 1px 1px var(--key-shadow-reset);
   color: var(--reset-color)
 }
+
 .reset {
   text-transform: uppercase;
   grid-area: 5/1/6/3;
 }
+
 .equal {
   grid-area: 5/3/6/5;
 }
-
 
 /* top */
 .top {
@@ -177,72 +178,17 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
   color: var(--screen-color);
-  color: white;
+  color: var(--default-text);
 }
+
 .top__theme {
   display: flex;
   align-items: center;
 }
-/* .toggle {
-  position: relative;
-  display: inline-block;
-  width:60px;
-  height: 24px;
-}
-
-.toggle input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--e);
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: var(--screen-color);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(16px);
-  -ms-transform: translateX(16px);
-  transform: translateX(16px);
-} */
 
 .switch-toggle {
    float: left;
-   background: #242729;
+   background: var(--screen-background);
    border-radius: 20px;
 }
 .switch-toggle input {
@@ -250,16 +196,19 @@ input:checked + .slider:before {
   border-radius: 50%;
   opacity: 0;
 }
+
 .switch-toggle input + label {
   padding: 15px;
-  float:left;
+  float: left;
   border-radius: 50%;
   cursor: pointer;
 }
+
 .switch-toggle input:checked + label {
-  background: #ccc;
+  background: var(--key-background-equal);
   border-radius: 50%;
 }
+
 .to {
   display: flex;
   align-items: center;
@@ -271,22 +220,10 @@ input:checked + .slider:before {
   font-size: 12px;
   margin-right: 20px;
 }
+
 .logo {
   font-size: 2.5rem;
 }
-
-/* Rounded sliders */
-/* .slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-} */
-
-
-
-
 
 /* media querry */
 @media only screen and (max-width: 500px) {
@@ -295,7 +232,3 @@ input:checked + .slider:before {
     width: 90%;
   }
 }
-
-
-
-
