@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap');
 
 /* Global colours  */
-:root {
+html {
   --main-background: hsl(222, 26%, 31%);
   --toggle-background: hsl(223, 31%, 20%);
   --screen-background: hsl(224, 36%, 15%);
@@ -22,8 +22,7 @@
   --screen-color: hsl(30, 25%, 89%);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
+html[data-theme: 'light'] {
     --main-background: hsl(0, 0%, 90%);
     --toggle-background: hsl(0, 5%, 81%);
     --screen-background: hsl(0, 0%, 93%);
@@ -42,11 +41,9 @@
     --screen-color: hsl(0, 0, 100%);
     --equal: hsl(45, 7%, 89%);
     --text: hsl(0, 0, 100%);
-  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+html[data-theme: 'dark'] {
     --main-background: hsl(268, 75%, 9%);
     --toggle-background: hsl(268, 71%, 12%);
     --screen-background: hsl(268, 71%, 12%);
@@ -66,7 +63,6 @@
     --Very dark blue: hsl(198, 20%, 13%);
     --text: hsl(0, 0, 100%);
     --screen-color: hsl(52, 100%, 62%);
-  }
 }
 
 /* css reset  */
@@ -178,7 +174,7 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
   color: var(--screen-color);
-  color: var(--default-text);
+  color: var(--key-background-reset);
 }
 
 .top__theme {
@@ -188,7 +184,7 @@ body {
 
 .switch-toggle {
    float: left;
-   background: var(--screen-background);
+   background-color: var(--screen-background);
    border-radius: 20px;
 }
 .switch-toggle input {
@@ -205,7 +201,7 @@ body {
 }
 
 .switch-toggle input:checked + label {
-  background: var(--key-background-equal);
+  background-color: var(--key-background-equal);
   border-radius: 50%;
 }
 
