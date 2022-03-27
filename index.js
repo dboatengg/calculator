@@ -34,13 +34,11 @@ buttonArray.map((button) => {
         try {
           screen.innerText = eval(screen.innerText);
         } catch {
-          screen.innerText = "Error";
+          screen.innerText = "error";
         }
         break;
       case "DEL":
-        if (screen.innerText) {
-          screen.innerText = screen.innerText.slice(0, -1);
-        }
+        if (screen.innerText) screen.innerText = screen.innerText.slice(0, -1);
         break;
       default:
         screen.innerText += e.target.innerText;
