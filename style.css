@@ -16,7 +16,7 @@
   
   /* --very-dark-grayish-blue: hsl(221, 14%, 31%); */
   --default-text: hsl(221, 14%, 31%);
-  --reset-color: hsl(30, 25%, 89%);
+  --reset-colour: hsl(30, 25%, 89%);
   --equal: hsl(30, 25%, 89%);
   --text: hsl(0, 0, 100%);
   --screen-color: hsl(30, 25%, 89%);
@@ -58,7 +58,7 @@
     /* --Light yellow: hsl(52, 100%, 62%); */
     --default-text: hsl(52, 100%, 62%);
     --equal: hsl(0, 0, 100%);
-    --reset-colour: hsl(45, 7%, 89%);
+    --reset-colour: hsl(30, 25%, 89%);
     --Very dark blue: hsl(198, 20%, 13%);
     --text: hsl(0, 0, 100%);
     --screen-color: hsl(52, 100%, 62%);
@@ -155,7 +155,7 @@ body {
 .reset, .del {
   background-color: var(--key-background-reset);
   box-shadow: 0px 1px 1px 1px var(--key-shadow-reset);
-  color: var(--reset-color)
+  color: var(--reset-colour)
 }
 
 .reset {
