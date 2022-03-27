@@ -183,7 +183,7 @@ body {
   display: flex;
   align-items: center;
 }
-.toggle {
+/* .toggle {
   position: relative;
   display: inline-block;
   width:60px;
@@ -209,7 +209,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--e);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -227,7 +227,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: var(--screen-color);
 }
 
 input:focus + .slider {
@@ -238,8 +238,26 @@ input:checked + .slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
-}
+} */
 
+.switch-toggle {
+   float: left;
+   background: #242729;
+   border-radius: 20px;
+}
+.switch-toggle input {
+  position: absolute;
+  opacity: 0;
+}
+.switch-toggle input + label {
+  padding: 15px;
+  float:left;
+  cursor: pointer;
+}
+.switch-toggle input:checked + label {
+  background: #ccc;
+  border-radius: 50%;
+}
 .to {
   display: flex;
   align-items: center;
@@ -249,17 +267,17 @@ input:checked + .slider:before {
 
 .theme {
   font-size: 12px;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 /* Rounded sliders */
-.slider.round {
+/* .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
-}
+} */
 
 
 
