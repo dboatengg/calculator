@@ -182,17 +182,17 @@ body {
   align-items: center;
 }
 
+/* toggle  */
 .switch-toggle {
    float: left;
-   background-color: var(--screen-background);
+   /* background-color: var(--screen-color); */
+   background-color: hsl(30, 25%, 89%);
    border-radius: 20px;
 }
 .switch-toggle input {
   position: absolute;
   border-radius: 50%;
   opacity: 0;
-  /* width: 0; */
-  /* height: 0; */
 }
 
 .switch-toggle input + label {
@@ -203,7 +203,8 @@ body {
 }
 
 .switch-toggle input:checked + label {
-  background-color: var(--key-background-equal);
+  /* background-color: var(--key-background-equal); */
+  background-color: hsl(6, 63%, 50%);
   border-radius: 50%;
 }
 
