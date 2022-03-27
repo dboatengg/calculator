@@ -28,44 +28,24 @@ buttonArray.map((button) => {
   });
 });
 
-//dark/light/auto mode
-const toggle = document.querySelectorAll("#toggle");
-const toggleArray = Array.from(toggle);
-
-// toggleArray.forEach((toggle) => {
-//   toggle.addEventListener("click", () => {
-//     if (toggle.className == "dark") {
-//       document.documentElement.setAttribute("data-theme", "dark");
-//       localStorage.setItem("data-theme", "dark");
-//       console.log(toggle);
-//     }
-//     if (toggle.className == "light") {
-//       document.documentElement.setAttribute("data-theme", "light");
-//       localStorage.setItem("data-theme", "dark");
-//       console.log(toggle);
-//     }
-//   });
-// });
-
-let theme = localStorage.getItem("data-theme");
-const changeToDark = () => {
-  document.documentElement.setAttribute("data-theme", "dark");
-  localStorage.setItem("data-theme", "dark");
-};
-const changeToLight = () => {
-  document.documentElement.setAttribute("data-theme", "light");
-  localStorage.setItem("data-theme", "light");
-};
-
-toggleArray.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    let theme = localStorage.getItem("data-theme");
-    if (theme === "dark") {
-      changeToLight();
-    }
-    if (theme === "light") {
-      changeToDark();
-    }
-  });
-});
-// console.log(toggleArray);
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+  localStorage.setItem("theme", themeName);
+  document.documentElement.className = themeName;
+}
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem("theme") === "dark") {
+    setTheme("light");
+  } else {
+    setTheme("dark");
+  }
+}
+// Immediately invoked function to set the theme on initial load
+(function () {
+  if (localStorage.getItem("theme") === "dark") {
+    setTheme("dark");
+  } else {
+    setTheme("light");
+  }
+})();
